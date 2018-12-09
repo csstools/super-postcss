@@ -1,0 +1,54 @@
+{
+  "name": "super-postcss",
+  "version": "0.1.0",
+  "description": "Now you’re playing with PostCSS — Super PostCSS!",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "csstools/super-postcss",
+  "homepage": "https://github.com/csstools/super-postcss#readme",
+  "bugs": "https://github.com/csstools/super-postcss/issues",
+  "main": "index.js",
+  "module": "index.mjs",
+  "files": [
+    "index.js",
+    "index.js.map",
+    "index.mjs",
+    "index.mjs.map"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "pretest:postcss": "rollup -c --silent",
+    "test": "npm run test:js && npm run test:postcss",
+    "test:js": "eslint src/*.js --cache --ignore-path .gitignore --quiet",
+    "test:postcss": "node test"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {
+    "postcss": "^7.0.6",
+    "postcss-selector-parser": "^5.0.0-rc.4",
+    "postcss-values-parser": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-config-dev": "^2.0.0",
+    "pre-commit": "^1.2.2",
+    "rollup": "^0.67.4",
+    "rollup-plugin-babel": "^4.0.3"
+  },
+  "eslintConfig": {
+    "extends": "dev",
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "on"
+  ]
+}
